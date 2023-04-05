@@ -1,4 +1,38 @@
 :root {
+  --dk-grey: #1B262C;
+  --dk-blue: #0F4C75;
+  --md-blue: #3282B8;
+  --lt-blue: #BBE1FA;
+  --off-white: #f5f8fa;
+  --off-black: #14171a;
+
+  --dk-beige: #F2DEBA;
+  --md-beige: #FFEFD6;
+  --dk-teal: #0E5E6F;
+  --md-teal: #3A8891;
+
+  --background-gradient: linear-gradient(
+        180deg,
+        var(--lt-blue) 0%,
+        var(--md-beige) 45.9%,
+        var(--dk-beige) 100%
+    );
+}
+
+.background {
+  background: var(--md-beige);
+  height: 100vh;
+}
+
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+/* :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
@@ -104,4 +138,4 @@ a {
   html {
     color-scheme: dark;
   }
-}
+} */
