@@ -1,0 +1,18 @@
+.navbarTitle {
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--font-title-family);
+    letter-spacing: 0.3rem;
+    color: var(--off-white);
+    text-decoration: none;
+}
+
+.navbarButton {
+    display: block;
+    color: var(--off-white);
+    font-family: var(--font-body-family);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
