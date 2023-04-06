@@ -27,7 +27,7 @@ export default function Home() {
           <NavBar />
           <Box>
             <Typography variant='h1'>
-              Carousel Hero Banner
+              Hero Banner
             </Typography>
           </Box>
           <Box>

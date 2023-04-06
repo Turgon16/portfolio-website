@@ -44,14 +44,14 @@ const NavBar = () => {
     const router = useRouter();
 
   return (
-    <AppBar position="sticky" sx={{background: '#0E5E6F'}}>
+    <AppBar position="sticky" sx={{background: '#0F4C75'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
             {/* Below is the md-xl view of the appbar */}
-            <Box sx={{ width: '100%', display: {xs: 'none', md: 'flex'}, justifyContent: 'space-between' }} >
+            <Box sx={{ width: '100%', display: 'flex', justifyContent: 'space-between' }} >
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' } }>
                     <IconButton 
-                        sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color: 'white' }}
+                        sx={{ display: { xs: 'flex', md: 'flex' }, mr: 1, color: 'white' }}
                         onClick={ () => {
                             router.push('../');
                         }}>
@@ -64,7 +64,7 @@ const NavBar = () => {
                         href="/"
                         sx={{
                         mr: 2,
-                        display: { xs: 'none', md: 'flex' },
+                        display: 'flex',
                         fontFamily: 'monospace',
                         fontWeight: 700,
                         letterSpacing: '.3rem',
@@ -80,7 +80,7 @@ const NavBar = () => {
                     <Button
                         key={page}
                         onClick={handleCloseNavMenu}
-                        sx={{ my: 2, color: 'white', display: 'block' }}
+                        sx={{ my: 2, color: 'white', display: 'block', fontWeight: 700 }}
                         >
                         {page}
                     </Button>
@@ -119,12 +119,12 @@ const NavBar = () => {
                     >
                     {pages.map((page) => (
                         <MenuItem key={page} onClick={handleCloseNavMenu}>
-                        <Typography textAlign="center">{page}</Typography>
+                          <Typography textAlign="center">{page}</Typography>
                         </MenuItem>
                     ))}
                     </Menu>
                 </Box>
-                <IconButton 
+                {/* <IconButton 
                     sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, color: 'white' }}
                     onClick={ () => {
                         router.push('../');
@@ -148,7 +148,7 @@ const NavBar = () => {
                     }}
                 >
                     Tyler Hum
-                </Typography>      
+                </Typography>       */}
         </Toolbar>
       </Container>
     </AppBar>
