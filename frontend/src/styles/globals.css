@@ -1,35 +1,40 @@
 :root {
-  --dk-grey: #1B262C;
-  --dk-blue: #0F4C75;
-  --md-blue: #3282B8;
-  --lt-blue: #BBE1FA;
-  --off-white: #f5f8fa;
-  --off-black: #14171a;
+    --dk-grey: #1b262c;
+    --dk-blue: #0f4c75;
+    --md-blue: #3282b8;
+    --lt-blue: #bbe1fa;
+    --off-white: #f5f8fa;
+    --off-black: #14171a;
 
-  --dk-beige: #F2DEBA;
-  --md-beige: #FFEFD6;
-  --dk-teal: #0E5E6F;
-  --md-teal: #3A8891;
+    --font-grey: #2b2c2d;
 
-  --background-gradient: linear-gradient(
+    --dk-beige: #f2deba;
+    --md-beige: #ffefd6;
+    --dk-teal: #0e5e6f;
+    --md-teal: #3a8891;
+
+    --blue-gradient: linear-gradient(
         180deg,
         var(--lt-blue) 0%,
-        var(--md-beige) 45.9%,
-        var(--dk-beige) 100%
+        var(--md-blue) 45.9%,
+        var(--dk-blue) 100%
     );
+
+    --font-title-family: 'Roboto Slab', serif;
+    --font-body-family: 'Mulish', sans-serif;
 }
 
-.background {
-  background: var(--off-white);
-  height: 100vh;
-}
+/* .background {
+    background: var(--off-white);
+    height: 100vh;
+} */
 
 .centered-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
 /* :root {
@@ -139,3 +144,4 @@ a {
     color-scheme: dark;
   }
 } */
+
