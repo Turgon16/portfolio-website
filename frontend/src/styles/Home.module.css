@@ -1,15 +1,17 @@
+/* Profile Banner Styles */
 .profile {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100vh;
     background: var(--off-white);
+    /* box-shadow: 5px 5px 20px var(--md-blue); */
 }
 .profileImg {
-    display: block;
-    margin: 2rem 0 1rem 0;
-    min-width: none;
+    margin-top: 2rem;
+    width: 100%;
     max-width: 20rem;
     border-radius: 31.25rem;
     border: 0.5rem solid var(--dk-blue);
@@ -24,22 +26,8 @@
     color: var(--md-blue);
 }
 
-/* .profileImg2 {
-    -webkit-animation: morph 8s ease-in-out infinite;
-    animation: morph 8s ease-in-out infinite;
-    background-image: url(/static/media/heropfp.7bb160c….png);
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 3px solid #2d2e32;
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    height: 35rem;
-    position: relative;
-    transition: all 1s ease-in-out;
-    width: 35rem;
-} */
-
 .profileTextBox {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,7 +41,8 @@
 }
 
 .profileTitle1,
-.profileTitle2 {
+.profileTitle2,
+.parallaxTitle {
     color: var(--font-grey);
     font-family: var(--font-title-family);
     font-size: 2.25rem;
@@ -70,14 +59,78 @@
     font-size: 1rem;
     text-align: center;
 }
+.profilePrideFlagContainer {
+    padding-left: 1rem;
+}
+.profilePrideFlag {
+    position: absolute;
+}
+
+/* Parallax Banner Styles */
+.parallaxBanner {
+    background: url('../../public/img/photo9.webp') center / cover no-repeat;
+    background-attachment: fixed;
+    padding: 4rem 0 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.parallaxContainer1,
+.parallaxContainer2 {
+    background: var(--transparent-white);
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 5px var(--dk-blue);
+}
+
+.parallaxContainer1 {
+    margin-bottom: 4rem;
+}
+
+.parallaxIcon {
+    background: var(--off-white);
+    padding: 5px;
+    border-radius: 30px;
+    width: 3rem;
+    height: 3rem;
+}
+
+.parallaxTitle {
+    padding: 2rem 0 0 0;
+    font-size: 2rem;
+    white-space: nowrap;
+}
+
+.parallaxText {
+    color: var(--font-grey);
+    font-family: var(--font-body-family);
+    font-size: 1rem;
+    /* font-weight: 700; */
+    text-align: center;
+    white-space: nowrap;
+}
+.parallaxListButton {
+    border-radius: 30px;
+}
 
 /* SMALL VIEW*/
 @media screen and (min-width: 600px) {
+    /* Profile Banner Styles */
     .profile {
         flex-direction: row-reverse;
         justify-content: center;
     }
-
+    .profileImg {
+        max-width: 50%;
+        margin-right: 1rem;
+    }
     .profileTextBox {
         align-items: flex-start;
         padding: 1.5rem;
@@ -85,10 +138,12 @@
 
     .profileTitle1,
     .profileTitle2 {
+        font-size: 3rem;
         text-align: left;
     }
 
     .profileText {
+        font-size: 1.25rem;
         padding: 2rem 0 2rem 0;
         text-align: left;
     }
@@ -97,10 +152,22 @@
         width: 100%;
         padding: 0 0 0 3rem;
     }
+
+    /* Parallax Banner Styles */
+    .parallaxTitle {
+        font-size: 3rem;
+    }
+    .parallaxText {
+        font-size: 1.25rem;
+    }
 }
 
 /* MEDIUM VIEW */
 @media screen and (min-width: 900px) {
+    /* Profile Banner Styles */
+    .profileImg {
+        max-width: 25rem;
+    }
     .profileTitle2 {
         padding: 0 0 0 3.5rem;
     }
@@ -111,17 +178,44 @@
 
 /* LARGE VIEW */
 @media screen and (min-width: 1200px) {
+    /* Profile Banner Styles */
     .profileTitle1,
     .profileTitle2 {
-        font-size: 3.25rem;
+        font-size: 4rem;
+    }
+    .profileText {
+        font-size: 2rem;
     }
 
-    .profileText {
-        font-size: 1.5rem;
+    /* Parallax Banner Styles */
+    .parallaxBanner {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .parallaxContainer1,
+    .parallaxContainer2 {
+        padding: 2rem;
+        width: 30%;
+    }
+    .parallaxContainer1 {
+        margin-bottom: 0;
+    }
+    .parallaxTitle {
+        font-size: 4rem;
+    }
+    .parallaxText {
+        font-size: 2rem;
     }
 }
 
 /* X-LARGE VIEW */
 @media screen and (min-width: 1536px) {
+    /* Profile Banner Styles */
+    .profileImg {
+        margin-right: none;
+    }
+
+    /* Parallax Banner Styles */
 }
 
