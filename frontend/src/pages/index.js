@@ -2,19 +2,14 @@
 import Head from 'next/head';
 
 // MUI Imports
-import EmailIcon from '@mui/icons-material/Email';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { CssBaseline } from '@mui/material';
 import Box from '@mui/material/Box';
-import IconButton from '@mui/material/IconButton';
-import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 
 // Project & Style Imports
 import NavBar from '@/components/NavBar';
-import { HomeItems } from '@/utils/constants/home-constants';
-import styles from '../styles/Home.module.css';
+import ParallaxBanner from '@/components/home/ParallaxBanner';
+import ProfileBanner from '@/components/home/ProfileBanner';
 
 export default function Home() {
     return (
@@ -35,71 +30,8 @@ export default function Home() {
                 <CssBaseline />
                 <NavBar />
                 <Box className="centered-container">
-                    <Box className={styles.profile}>
-                        <Box
-                            component={'img'}
-                            className={styles.profileImg}
-                            alt={HomeItems.profile.alt}
-                            src={HomeItems.profile.img}
-                        />
-                        <Box className={styles.profileTextBox}>
-                            <Box className={styles.profileTitleBox}>
-                                <Typography
-                                    variant="h1"
-                                    className={styles.profileTitle1}
-                                >
-                                    {HomeItems.profile.title1}
-                                </Typography>
-                                <Typography
-                                    variant="h1"
-                                    className={styles.profileTitle2}
-                                >
-                                    {HomeItems.profile.title2}
-                                </Typography>
-                            </Box>
-                            <Typography className={styles.profileText}>
-                                {HomeItems.profile.text}
-                                <span style={{ whiteSpace: 'nowrap' }}>
-                                    {HomeItems.profile.textWidow}
-                                </span>
-                            </Typography>
-                            <Box className={styles.profileSocialsBox}>
-                                <IconButton>
-                                    <Tooltip title="LinkedIn">
-                                        <LinkedInIcon
-                                            fontSize="large"
-                                            className={
-                                                styles.profileSocialsIcon
-                                            }
-                                        />
-                                    </Tooltip>
-                                </IconButton>
-                                <IconButton>
-                                    <Tooltip title="GitHub">
-                                        <GitHubIcon
-                                            fontSize="large"
-                                            className={
-                                                styles.profileSocialsIcon
-                                            }
-                                        />
-                                    </Tooltip>
-                                </IconButton>
-                                <IconButton>
-                                    <Tooltip title="Email">
-                                        <EmailIcon
-                                            fontSize="large"
-                                            className={
-                                                styles.profileSocialsIcon
-                                            }
-                                        />
-                                    </Tooltip>
-                                </IconButton>
-                            </Box>
-                        </Box>
-                    </Box>
-                    <Box>
-                        <Typography variant="h3">Body 1</Typography>
-                    </Box>
+                    <ProfileBanner />
+                    <ParallaxBanner />
                     <Box>
                         <Typography variant="h3">Body 2</Typography>
                     </Box>
