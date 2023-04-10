@@ -5,8 +5,10 @@ import { useRouter } from 'next/router';
 // MUI Imports
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
@@ -82,6 +84,17 @@ const ProfileBanner = () => {
                             />
                         </Tooltip>
                     </IconButton>
+                </Box>
+                <Box className={styles.profileButtonContainer}>
+                    <Button className={styles.button} href="#" color="inherit">
+                        <Typography className={styles.buttonText}>
+                            Try one of my apps
+                        </Typography>
+                        <KeyboardDoubleArrowRightIcon
+                            fontSize="large"
+                            className={styles.buttonIcon}
+                        />
+                    </Button>
                 </Box>
             </Box>
         </Box>

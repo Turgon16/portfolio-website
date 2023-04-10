@@ -5,9 +5,8 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: var(--off-white);
-    /* box-shadow: 5px 5px 20px var(--md-blue); */
 }
 .profileImg {
     margin-top: 2rem;
@@ -42,7 +41,8 @@
 
 .profileTitle1,
 .profileTitle2,
-.parallaxTitle {
+.parallaxTitle,
+.cardsHeader {
     color: var(--font-grey);
     font-family: var(--font-title-family);
     font-size: 2.25rem;
@@ -64,6 +64,20 @@
 }
 .profilePrideFlag {
     position: absolute;
+}
+.profileButtonContainer {
+    margin-top: 1rem;
+}
+.button {
+    border-radius: 30px;
+    padding: 1rem;
+    text-transform: none;
+    white-space: nowrap;
+}
+
+.button:hover {
+    color: var(--md-blue);
+    /* background: var(--lt-blue); */
 }
 
 /* Parallax Banner Styles */
@@ -120,6 +134,15 @@
     border-radius: 30px;
 }
 
+/* Cards Banner Styles  */
+.cardsBanner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--off-white);
+}
+
 /* SMALL VIEW*/
 @media screen and (min-width: 600px) {
     /* Profile Banner Styles */
@@ -151,6 +174,21 @@
     .profileSocialsBox {
         width: 100%;
         padding: 0 0 0 3rem;
+        position: relative;
+    }
+    .profileButtonContainer {
+        margin-top: none;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .buttonText {
+        font-size: 1.25rem;
+    }
+    .buttonIcon {
+        width: 2.5rem;
+        height: 2.5rem;
     }
 
     /* Parallax Banner Styles */
@@ -168,12 +206,6 @@
     .profileImg {
         max-width: 25rem;
     }
-    .profileTitle2 {
-        padding: 0 0 0 3.5rem;
-    }
-    .profileText {
-        padding: 2rem 0 2rem 3.5rem;
-    }
 }
 
 /* LARGE VIEW */
@@ -183,8 +215,20 @@
     .profileTitle2 {
         font-size: 4rem;
     }
+    .profileTitle2 {
+        padding: 0 0 0 3.5rem;
+    }
     .profileText {
         font-size: 2rem;
+        padding: 2rem 0 2rem 3.5rem;
+    }
+
+    .buttonText {
+        font-size: 2rem;
+    }
+    .buttonIcon {
+        width: 3.5rem;
+        height: 3.5rem;
     }
 
     /* Parallax Banner Styles */

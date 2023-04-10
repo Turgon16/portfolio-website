@@ -2,6 +2,7 @@
 import { useRouter } from 'next/router';
 
 // MUI Imports
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -76,6 +77,19 @@ const ParallaxBanner = () => {
                             </ListItemButton>
                         </ListItem>
                     ))}
+                    <ListItem>
+                        <ListItemButton
+                            className={styles.button}
+                            component="a"
+                            href="#"
+                            sx={{ display: 'flex', justifyContent: 'center' }}
+                        >
+                            <Typography className={styles.buttonText}>
+                                Learn More
+                            </Typography>
+                            <KeyboardDoubleArrowRightIcon fontSize="large" />
+                        </ListItemButton>
+                    </ListItem>
                 </List>
             </Paper>
         </Box>
