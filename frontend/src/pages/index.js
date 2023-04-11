@@ -33,12 +33,6 @@ export default function Home() {
                     <ProfileBanner />
                     <ParallaxBanner />
                     <CardsBanner />
-                    <Box>
-                        <Typography variant="h3">Body 3</Typography>
-                    </Box>
-                    <Box>
-                        <Typography variant="h2">About Me</Typography>
-                    </Box>
                     <Box className="flex-center">
                         <Typography variant="h4">Footer Here</Typography>
                     </Box>
