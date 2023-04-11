@@ -38,7 +38,7 @@ const ProfileBanner = () => {
                 </Box>
                 <Typography className={styles.profileText}>
                     {HomeItems.profile.text}
-                    <span style={{ whiteSpace: 'nowrap' }}>
+                    <span className={'widow-wrap'}>
                         {HomeItems.profile.textWidow}
                     </span>
                     <span className={styles.profilePrideFlagContainer}>
