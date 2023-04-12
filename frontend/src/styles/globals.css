@@ -16,22 +16,16 @@
     --dk-teal: #0e5e6f;
     --md-teal: #3a8891;
 
-    --blue-gradient: linear-gradient(
+    --dark-gradient: linear-gradient(
         180deg,
-        var(--lt-blue) 0%,
-        var(--md-blue) 45.9%,
-        var(--dk-blue) 100%
+        var(--md-blue) 0%,
+        var(--dk-blue) 25%,
+        var(--dk-grey) 100%
     );
 
     --font-title-family: 'Roboto Slab', serif;
     --font-body-family: 'Mulish', sans-serif;
 }
-
-/* .background {
-    background: var(--off-white);
-    height: 100vh;
-} */
-
 .centered-container {
     display: flex;
     flex-direction: column;
@@ -45,6 +39,19 @@
 }
 .widow-wrap {
     white-space: nowrap;
+}
+
+/* SMALL VIEW*/
+@media screen and (min-width: 600px) {
+}
+/* MEDIUM VIEW */
+@media screen and (min-width: 900px) {
+}
+/* LARGE VIEW */
+@media screen and (min-width: 1200px) {
+}
+/* X-LARGE VIEW */
+@media screen and (min-width: 1536px) {
 }
 
 /* :root {

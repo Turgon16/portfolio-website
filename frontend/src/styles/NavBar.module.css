@@ -16,3 +16,16 @@
     font-weight: 700;
     text-transform: uppercase;
 }
+
+/* SMALL VIEW*/
+@media screen and (min-width: 600px) {
+}
+/* MEDIUM VIEW */
+@media screen and (min-width: 900px) {
+}
+/* LARGE VIEW */
+@media screen and (min-width: 1200px) {
+}
+/* X-LARGE VIEW */
+@media screen and (min-width: 1536px) {
+}
