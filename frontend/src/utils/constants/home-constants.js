@@ -74,11 +74,11 @@ const BackEndStack = [
 ];
 
 const FrontEndBox = {
-    text1: `Single Page Applications using the React framework `,
+    text1: `Single Page Applications built using the React framework `,
     text1Widow: `and Next.js.`,
     text2: `Fluid and Responsive web design with a `,
     text2Widow: `mobile-first approach.`,
-    text3: `Experienced with Bootstrap, MUI, and Material Design styling libraries to build clean and `,
+    text3: `Experienced with Bootstrap, MUI, and Material Design styling libraries to build a clean and `,
     text3Widow: `user-centric UI/UX.`,
     img1: `../img/Roles-Landing-Page.webp`,
     alt1: `An image of a roles-management dashboard with a search bar above and a table of roles below.`,
@@ -95,20 +95,16 @@ const FrontEndBox = {
 const BackEndBox = {
     text1: `Application development in a Microsoft environment with ASP.NET Core. Experience using both MVC razor pages and `,
     text1Widow: `Web API's.`,
-    text2: `Application development with Java and the Jakarta EE platform. Writing end to end tests using Arquillian and Selenium. Building and consumption of RESTful API's using JAX-RS.`,
-    text2Widow: ``,
-    text3: ``,
-    text3Widow: ``,
-    img1: `../img/Roles-Landing-Page.webp`,
-    alt1: `An image of a roles-management dashboard with a search bar above and a table of roles below.`,
-    img2: `../img/Roles-ProfileEdit-Page.webp`,
-    alt2: `An image of a roles-management edit page, with a description of the role above, a tab option for 'profile' and for 'permissions', and a form below the tabs to edit the role.`,
-    img3: `../img/SoW-sm.webp`,
-    alt3: `A mobile-view of a web page titled 'The Story Of Water'.`,
-    img4: `../img/SoW-md.webp`,
-    alt4: `A medium-sized view of a web page titled 'The Story Of Water'.`,
-    img5: `../img/SoW-md.webp`,
-    alt5: `A large-sized view of a web page titled 'The Story Of Water'.`,
+    text2: `Application development with Java and the Jakarta EE platform. Writing end to end tests using Arquillian and Selenium. Building and consuming RESTful API's `,
+    text2Widow: `using JAX-RS.`,
+    text3: `Some Words Go Here `,
+    text3Widow: `About Things`,
+    img1: `../img/ETools2PO.webp`,
+    alt1: `An image of a purchase order system developed with ASP.NET Core using MVC razor pages.`,
+    img2: `../img/EToolsPurchaseOrders.webp`,
+    alt2: `An image of a purchase order system developed with ASP.NET Core using MVC razor pages.`,
+    img3: `../img/EToolsPurchaseOrders.webp`,
+    alt3: `An image of a purchase order system developed with ASP.NET Core using MVC razor pages.`,
 };
 
 export { HomeItems, FrontEndStack, BackEndStack, FrontEndBox, BackEndBox };
