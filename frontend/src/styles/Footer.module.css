@@ -1,0 +1,39 @@
+.footer {
+    background: var(--dk-blue);
+    padding: 1rem;
+}
+.footerFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footerSocialsBox {
+    white-space: nowrap;
+}
+.footerText {
+    font-size: 1rem;
+    font-family: var(--font-body-family);
+    color: var(--off-white);
+}
+.footerSocialsIcon {
+    color: var(--off-white);
+}
+.footerSocialsIcon:hover {
+    color: var(--lt-blue);
+}
+
+/* SMALL VIEW*/
+@media screen and (min-width: 600px) {
+    .footerSocialsIcon {
+        font-size: 2rem;
+    }
+}
+/* MEDIUM VIEW */
+@media screen and (min-width: 900px) {
+}
+/* LARGE VIEW */
+@media screen and (min-width: 1200px) {
+}
+/* X-LARGE VIEW */
+@media screen and (min-width: 1536px) {
+}
