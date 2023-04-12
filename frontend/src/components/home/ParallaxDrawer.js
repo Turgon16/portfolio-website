@@ -23,7 +23,7 @@ const ParallaxDrawer = ({
                     href={'#front-end'}
                 >
                     <Typography className={styles.parallaxCloseButtonText}>
-                        Close Window
+                        Close
                     </Typography>
                     <CloseIcon className={styles.parallaxCloseIcon} />
                 </IconButton>
