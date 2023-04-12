@@ -5,21 +5,22 @@ import { useState } from 'react';
 // MUI Imports
 import CloseIcon from '@mui/icons-material/Close';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
+import { IconButton } from '@mui/material';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Typography from '@mui/material/Typography';
-
 // Project & Style Imports
 import {
+    BackEndBox,
     BackEndStack,
     FrontEndBox,
     FrontEndStack,
 } from '@/utils/constants/home-constants';
-import { IconButton } from '@mui/material';
 import styles from '../../styles/Home.module.css';
+import ParallaxDrawer from './ParallaxDrawer';
 
 const ParallaxBanner = () => {
     const [showClass1, setShowClass1] = useState('false');
@@ -32,6 +33,23 @@ const ParallaxBanner = () => {
 
     const handleClass2Toggle = () => {
         setShowClass2(!showClass2);
+    };
+
+    const CloseWindowButton = () => {
+        return (
+            <Box className={styles.parallaxDrawerInnerContainer}>
+                <IconButton
+                    className={styles.parallaxCloseButton}
+                    onClick={handleClass1Toggle}
+                    href={'#front-end'}
+                >
+                    <Typography className={styles.parallaxCloseButtonText}>
+                        Close Window
+                    </Typography>
+                    <CloseIcon className={styles.parallaxCloseIcon} />
+                </IconButton>
+            </Box>
+        );
     };
 
     return (
@@ -77,79 +95,11 @@ const ParallaxBanner = () => {
                         </ListItem>
                     </List>
                 </Box>
-                <Box
-                    className={
-                        showClass1
-                            ? styles.parallaxContainer3
-                            : styles.parallaxContainer3 +
-                              ' ' +
-                              styles.showContainer3
-                    }
-                >
-                    <IconButton
-                        onClick={handleClass1Toggle}
-                        href={'#front-end'}
-                    >
-                        <Typography
-                            sx={{ color: 'white', whiteSpace: 'nowrap' }}
-                        >
-                            Close Window
-                        </Typography>
-                        <CloseIcon className={styles.parallaxCloseIcon} />
-                    </IconButton>
-                    <Box
-                        component={'img'}
-                        className={styles.parallaxImg}
-                        alt={FrontEndBox.alt1}
-                        src={FrontEndBox.img1}
-                    />
-                    <Typography className={styles.parallaxDrawerText}>
-                        {FrontEndBox.text1}
-                        <span className={'widow-wrap'}>
-                            {FrontEndBox.text1Widow}
-                        </span>
-                    </Typography>
-                    <Box className={'flex-evenly'}>
-                        <Box
-                            component={'img'}
-                            className={styles.parallaxImg2}
-                            alt={FrontEndBox.alt3}
-                            src={FrontEndBox.img3}
-                        />
-                    </Box>
-                    <Typography className={styles.parallaxDrawerText}>
-                        {FrontEndBox.text2}
-                        <span className={'widow-wrap'}>
-                            {FrontEndBox.text2Widow}
-                        </span>
-                    </Typography>
-                    <Box
-                        component={'img'}
-                        className={styles.parallaxImg}
-                        alt={FrontEndBox.alt2}
-                        src={FrontEndBox.img2}
-                    />
-                    <Typography className={styles.parallaxDrawerText}>
-                        {FrontEndBox.text3}
-                        <span className={'widow-wrap'}>
-                            {FrontEndBox.text3Widow}
-                        </span>
-                    </Typography>
-                    <IconButton
-                        onClick={handleClass1Toggle}
-                        href={'#front-end'}
-                    >
-                        <Typography
-                            sx={{ color: 'white', whiteSpace: 'nowrap' }}
-                        >
-                            Close Window
-                        </Typography>
-                        <CloseIcon
-                            className={styles.parallaxCloseIcon}
-                            href={'#'}
-                        />
-                    </IconButton>
-                </Box>
+                <ParallaxDrawer
+                    handleClass1Toggle={handleClass1Toggle}
+                    showClassFunction={showClass1}
+                    techstack={FrontEndBox}
+                />
             </Box>
 
             <Box className={styles.parallaxBottom}>
@@ -193,79 +143,11 @@ const ParallaxBanner = () => {
                         </ListItem>
                     </List>
                 </Box>
-                <Box
-                    className={
-                        showClass2
-                            ? styles.parallaxContainer4
-                            : styles.parallaxContainer4 +
-                              ' ' +
-                              styles.showContainer4
-                    }
-                >
-                    <IconButton
-                        onClick={handleClass2Toggle}
-                        href={'#front-end'}
-                    >
-                        <Typography
-                            sx={{ color: 'white', whiteSpace: 'nowrap' }}
-                        >
-                            Close Window
-                        </Typography>
-                        <CloseIcon className={styles.parallaxCloseIcon} />
-                    </IconButton>
-                    <Box
-                        component={'img'}
-                        className={styles.parallaxImg}
-                        alt={FrontEndBox.alt1}
-                        src={FrontEndBox.img1}
-                    />
-                    <Typography className={styles.parallaxDrawerText}>
-                        {FrontEndBox.text1}
-                        <span className={'widow-wrap'}>
-                            {FrontEndBox.text1Widow}
-                        </span>
-                    </Typography>
-                    <Box className={'flex-evenly'}>
-                        <Box
-                            component={'img'}
-                            className={styles.parallaxImg2}
-                            alt={FrontEndBox.alt3}
-                            src={FrontEndBox.img3}
-                        />
-                    </Box>
-                    <Typography className={styles.parallaxDrawerText}>
-                        {FrontEndBox.text2}
-                        <span className={'widow-wrap'}>
-                            {FrontEndBox.text2Widow}
-                        </span>
-                    </Typography>
-                    <Box
-                        component={'img'}
-                        className={styles.parallaxImg}
-                        alt={FrontEndBox.alt2}
-                        src={FrontEndBox.img2}
-                    />
-                    <Typography className={styles.parallaxDrawerText}>
-                        {FrontEndBox.text3}
-                        <span className={'widow-wrap'}>
-                            {FrontEndBox.text3Widow}
-                        </span>
-                    </Typography>
-                    <IconButton
-                        onClick={handleClass2Toggle}
-                        href={'#front-end'}
-                    >
-                        <Typography
-                            sx={{ color: 'white', whiteSpace: 'nowrap' }}
-                        >
-                            Close Window
-                        </Typography>
-                        <CloseIcon
-                            className={styles.parallaxCloseIcon}
-                            href={'#'}
-                        />
-                    </IconButton>
-                </Box>
+                <ParallaxDrawer
+                    handleClass1Toggle={handleClass2Toggle}
+                    showClassFunction={showClass2}
+                    techstack={BackEndBox}
+                />
             </Box>
         </Box>
     );
