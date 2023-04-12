@@ -43,7 +43,7 @@ const NavBar = () => {
     const router = useRouter();
 
     return (
-        <AppBar position="sticky" sx={{ background: '#0F4C75' }}>
+        <AppBar position="sticky" className={styles.background}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     {/* Below is the md-xl view of the appbar */}
@@ -142,31 +142,6 @@ const NavBar = () => {
                             ))}
                         </Menu>
                     </Box>
-                    {/* <IconButton 
-                    sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, color: 'white' }}
-                    onClick={ () => {
-                        router.push('../');
-                    }}>
-                    <DeveloperBoardIcon />
-                </IconButton>
-                <Typography
-                    variant="h5"
-                    noWrap
-                    component="a"
-                    href=""
-                    sx={{
-                    mr: 2,
-                    display: { xs: 'flex', md: 'none' },
-                    flexGrow: 1,
-                    fontFamily: 'monospace',
-                    fontWeight: 700,
-                    letterSpacing: '.3rem',
-                    color: 'inherit',
-                    textDecoration: 'none',
-                    }}
-                >
-                    Tyler Hum
-                </Typography>       */}
                 </Toolbar>
             </Container>
         </AppBar>

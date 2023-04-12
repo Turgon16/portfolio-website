@@ -1,3 +1,6 @@
+.background {
+    background: var(--dk-blue);
+}
 .navbarTitle {
     padding: 1rem;
     font-size: 2rem;
