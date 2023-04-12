@@ -4,8 +4,9 @@ import Head from 'next/head';
 // MUI Imports
 import { CssBaseline } from '@mui/material';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 
+// Project Imports
+import Footer from '@/components/Footer';
 import NavBar from '@/components/NavBar';
 import CardsBanner from '@/components/home/CardsBanner';
 import ParallaxBanner from '@/components/home/ParallaxBanner';
@@ -33,10 +34,8 @@ export default function Home() {
                     <ProfileBanner />
                     <ParallaxBanner />
                     <CardsBanner />
-                    <Box className="flex-center">
-                        <Typography variant="h4">Footer Here</Typography>
-                    </Box>
                 </Box>
+                <Footer />
             </main>
         </>
     );
