@@ -3,10 +3,10 @@
 // MUI Imports
 import CloseIcon from '@mui/icons-material/Close';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 // Project & Style Imports
-import { IconButton } from '@mui/material';
 import styles from '../../styles/Home.module.css';
 
 const ParallaxDrawer = ({
@@ -17,16 +17,16 @@ const ParallaxDrawer = ({
     const CloseWindowButton = () => {
         return (
             <Box className={styles.parallaxDrawerInnerContainer}>
-                <IconButton
+                <Button
                     className={styles.parallaxCloseButton}
                     onClick={handleClass1Toggle}
                     href={'#front-end'}
                 >
-                    <Typography className={styles.parallaxCloseButtonText}>
+                    <Typography className={styles.closeButtonText}>
                         Close
                     </Typography>
-                    <CloseIcon className={styles.parallaxCloseIcon} />
-                </IconButton>
+                    <CloseIcon className={styles.closeButtonIcon} />
+                </Button>
             </Box>
         );
     };

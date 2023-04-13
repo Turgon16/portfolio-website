@@ -3,9 +3,7 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 // MUI Imports
-import CloseIcon from '@mui/icons-material/Close';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
-import { IconButton } from '@mui/material';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -33,23 +31,6 @@ const ParallaxBanner = () => {
 
     const handleClass2Toggle = () => {
         setShowClass2(!showClass2);
-    };
-
-    const CloseWindowButton = () => {
-        return (
-            <Box className={styles.parallaxDrawerInnerContainer}>
-                <IconButton
-                    className={styles.parallaxCloseButton}
-                    onClick={handleClass1Toggle}
-                    href={'#front-end'}
-                >
-                    <Typography className={styles.parallaxCloseButtonText}>
-                        Close Window
-                    </Typography>
-                    <CloseIcon className={styles.parallaxCloseIcon} />
-                </IconButton>
-            </Box>
-        );
     };
 
     return (
