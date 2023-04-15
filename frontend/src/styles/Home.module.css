@@ -99,19 +99,21 @@
     background: url('../../public/img/photo9.webp') center / cover no-repeat;
     background-attachment: fixed;
     padding: 4rem 0 4rem 0;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+.parallaxCenteredContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
 }
 .parallaxTop,
 .parallaxBottom {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 .parallaxContainer1,
 .parallaxContainer2 {
@@ -147,7 +149,7 @@
     justify-content: center;
 }
 .showContainer {
-    /* max-height: 100vh; */
+    min-height: 100vh;
     max-width: 100%;
 }
 .parallaxContainer1 {
@@ -183,6 +185,7 @@
     align-items: center;
 }
 .parallaxDrawerText {
+    max-width: 52ch;
     margin: 2rem;
     color: var(--off-white);
     font-size: 1.25rem;
@@ -190,12 +193,14 @@
     /* text-align: center; */
 }
 .parallaxImg {
-    width: 80%;
+    width: 90%;
+    max-width: 45rem;
     border: 1px solid var(--dk-blue);
     border-radius: 30px;
 }
 .parallaxImg2 {
-    width: 40%;
+    width: 50%;
+    max-width: 20rem;
     border: 1px solid var(--dk-blue);
     border-radius: 30px;
 }
@@ -325,8 +330,14 @@
     }
 
     /* Parallax Banner Styles */
-    .parallaxBanner {
+    .parallaxCenteredContainer {
         flex-direction: row;
+    }
+    .parallaxTop,
+    .parallaxBottom {
+        width: 100%;
+        display: flex;
+        justify-content: unset;
     }
     .parallaxTop,
     .parallaxBottom {
@@ -337,7 +348,10 @@
     }
     .parallaxContainer1,
     .parallaxContainer2 {
+        width: unset;
+        max-width: 80%;
         margin: unset;
+        padding: 3rem;
     }
     .parallaxDrawerInnerContainer {
         display: flex;
