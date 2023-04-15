@@ -14,7 +14,7 @@ import styles from '../styles/Footer.module.css';
 const Footer = () => {
     return (
         <Box className={styles.footer}>
-            <Container>
+            <Container maxWidth="xl">
                 <Box className={styles.footerFlex}>
                     <Typography className={styles.footerText}>
                         Copyright &#169; 2023. All rights are reserved.
