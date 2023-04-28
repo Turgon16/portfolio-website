@@ -17,7 +17,7 @@ const Footer = () => {
             <Container maxWidth="xl">
                 <Box className={styles.footerFlex}>
                     <Typography className={styles.footerText}>
-                        Copyright &#169; 2023. All rights are reserved.
+                        Copyright &#169; 2023
                     </Typography>
                     <Box className={styles.footerSocialsBox}>
                         <IconButton
