@@ -200,41 +200,48 @@
 }
 .parallaxImg2 {
     width: 50%;
-    max-width: 20rem;
+    max-width: 30rem;
     border: 1px solid var(--dk-blue);
     border-radius: 30px;
 }
 /* Cards Banner Styles  */
 .cardsBanner {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 100vh;
     background: var(--dk-grey);
+    width: 100%;
 }
 .cardsContainer {
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 .card {
     margin: 2rem;
-    height: 20rem;
-    width: 60vw;
+    max-width: fit-content;
     background: var(--off-white);
-    border-radius: 1rem;
-    box-shadow: 2px 2px 5px var(--lt-blue);
+    border-radius: 0.5rem;
 }
 .cardContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 .cardsIcon {
     color: var(--dk-grey);
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
+}
+.cardsTitle {
+    padding: 1rem 0rem 1rem 0rem;
+    color: var(--dk-grey);
+    font-family: var(--font-title-family);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+.cardsText {
+    max-width: 52ch;
+    color: var(--dk-grey);
+    font-family: var(--font-body-family);
 }
 
 /* SMALL VIEW*/
@@ -377,11 +384,15 @@
         font-size: 4rem;
     }
     .parallaxText {
+        flex-grow: 1;
         font-size: 2rem;
     }
     .parallaxDrawerText {
         max-width: 32ch;
         font-size: 2rem;
+    }
+    .cardsContainer {
+        flex-direction: row;
     }
 }
 
