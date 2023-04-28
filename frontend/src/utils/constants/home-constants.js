@@ -48,38 +48,34 @@ const BackEndStack = [
         name: 'C#',
         img: '../svg/csharp.svg',
         alt: 'An image of a C# logo.',
-        url: 'https://learn.microsoft.com/en-us/dotnet/csharp/',
     },
     {
         id: 2,
         name: 'ASP.NET Core',
         img: '../svg/dotnetcore.svg',
         alt: 'An image of the .Net Core logo.',
-        url: 'https://learn.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-7.0',
     },
     {
         id: 3,
         name: 'Java & Jakarta',
         img: '../svg/java.svg',
         alt: 'An image of the Java logo.',
-        url: 'https://www.oracle.com/ca-en/java/',
     },
     {
         id: 4,
         name: 'MS SQL Server',
         img: '../svg/sql.svg',
         alt: 'An image of the SQL logo.',
-        url: 'https://www.microsoft.com/en-ca/sql-server/sql-server-2019',
     },
 ];
 
 const FrontEndBox = {
-    text1: `Single Page Applications built using the React framework `,
-    text1Widow: `and Next.js.`,
-    text2: `Fluid and Responsive web design with a `,
-    text2Widow: `mobile-first approach.`,
-    text3: `Experienced with Bootstrap, MUI, and Material Design styling libraries to build a clean and `,
-    text3Widow: `user-centric UI/UX.`,
+    text1: `Dynamic Single-Page Applications built with React and Next.js. Experienced with Bootstrap and MUI styling libraries for building quick,`,
+    text1Widow: `clean UI/UX. `,
+    text2: `Fluid and responsive web design with CSS Flexbox. Front-end development with a mobile-first approach. Intuitive layouts and a user-centric approach `,
+    text2Widow: `to UI/UX.`,
+    text3: `Managing stateful logic with the use of React Hooks. Using Fetch to consume REST API's. Creating compact and reusable components for maintainable, `,
+    text3Widow: `scalable code.`,
     img1: `../img/Roles-Landing-Page.webp`,
     alt1: `An image of a roles-management dashboard with a search bar above and a table of roles below.`,
     img2: `../img/Roles-ProfileEdit-Page.webp`,
@@ -93,18 +89,55 @@ const FrontEndBox = {
 };
 
 const BackEndBox = {
-    text1: `Application development in a Microsoft environment with ASP.NET Core. Experience using both MVC razor pages and `,
-    text1Widow: `Web API's.`,
-    text2: `Application development with Java and the Jakarta EE platform. Writing end to end tests using Arquillian and Selenium. Building and consuming RESTful API's `,
-    text2Widow: `using JAX-RS.`,
-    text3: `Some Words Go Here `,
-    text3Widow: `About Things`,
+    text1: `Application development in a Microsoft environment with C# and ASP.NET Core. Experience with SQL Server, queries with both SQL `, // Maybe add more database stuff into this one, move razor pages into next one
+    text1Widow: `and LINQ.`,
+    text2: `Extensive experience using Model-View-Controllers and server-side rendering with Razor Pages. Building RESTful services using .NET Core's `,
+    text2Widow: `Web API's.`,
+    text3: `Application development with Java and the Jakarta EE. Writing end to end tests using Arquillian and Selenium. Server side rendering with JSF. Building RESTful API's `,
+    text3Widow: `using JAX-RS.`,
     img1: `../img/ETools2PO.webp`,
     alt1: `An image of a purchase order system developed with ASP.NET Core using MVC razor pages.`,
-    img2: `../img/EToolsPurchaseOrders.webp`,
-    alt2: `An image of a purchase order system developed with ASP.NET Core using MVC razor pages.`,
-    img3: `../img/EToolsPurchaseOrders.webp`,
-    alt3: `An image of a purchase order system developed with ASP.NET Core using MVC razor pages.`,
+    img2: `../img/Character-List.webp`,
+    alt2: `An image of a Character Manager App, developed with Java, Jarkarta EE, Prime Faces and JAX-RS.`,
+    img3: `../img/EmployeeRegistration.webp`,
+    alt3: `An image of a Character Manager App, developed with Java, Jarkarta EE, Prime Faces and JAX-RS.`,
 };
 
-export { HomeItems, FrontEndStack, BackEndStack, FrontEndBox, BackEndBox };
+const Cards = [
+    {
+        name: 'Aquatic Biosphere Project',
+        icon: '../svg/AquaticBiosphereLogo.svg',
+        iconAlt: 'An icon image of the Aquatic Biosphere logo.',
+        text: 'I recently had the pleasure of working on a project for a non-profit registered charity organization that included rebuilding their future website from the ground up. During this four month project I helped gather requirements from our client, plan, design and build an internal user management system, and build the external ',
+        textWidow: 'facing website.',
+        linkText: 'Some Link',
+        link: '',
+    },
+    {
+        name: 'Agile Development',
+        icon: '../svg/scrum.svg',
+        iconAlt: 'An icon image of the Agile Scrum logo.',
+        text: 'I have experience working in an agile environment using the Scrum development methodology. We used a two-week sprint cycle during our work on the Aquatic Biosphere project, complete with daily standup, client consultation and working through the entire Scrum process from backlog meetings to review and retrospective. We used Jira as our primary project ',
+        textWidow: 'management tool.',
+        linkText: 'Some Link',
+        link: '',
+    },
+    {
+        name: 'NAIT DMIT Software Development',
+        icon: '../svg/education.svg',
+        iconAlt: 'An icon image of a graduation hat.',
+        text: 'I recently graduated from the Northern Alberta Institute of Technology (NAIT) with a diploma in Digital Media and IT. My specialization was in software development. The program included a broad range of essential skills and technologies in the development field, including full-stack application development, web development, database management and BI solution development, and developing Android applications with Flutter and Dart. NAIT taught me the core, fundamental development practices from documentation to testing to working in an team-based ',
+        textWidow: 'agile environment.',
+        linkText: 'Some Link',
+        link: '',
+    },
+];
+
+export {
+    HomeItems,
+    FrontEndStack,
+    BackEndStack,
+    FrontEndBox,
+    BackEndBox,
+    Cards,
+};
