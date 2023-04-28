@@ -11,14 +11,12 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
 // Project and Styles Imports
+import { navMenu } from '@/utils/constants/nav-menu-constants';
 import styles from '../styles/NavBar.module.css';
-
-const pages = ['Tech Stack', 'App Portfolio', 'About Me'];
 
 const NavBar = () => {
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -43,9 +41,9 @@ const NavBar = () => {
     const router = useRouter();
 
     return (
-        <AppBar position="sticky" className={styles.background}>
+        <AppBar className={styles.appBar}>
             <Container maxWidth="xl">
-                <Toolbar disableGutters>
+                <Toolbar>
                     {/* Below is the md-xl view of the appbar */}
                     <Box
                         sx={{
@@ -84,13 +82,14 @@ const NavBar = () => {
                             </Typography>
                         </Box>
                         <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                            {pages.map((page) => (
+                            {navMenu.map((navItem, index) => (
                                 <Button
                                     className={styles.navbarButton}
-                                    key={page}
+                                    key={index}
                                     onClick={handleCloseNavMenu}
+                                    href={navItem.href}
                                 >
-                                    {page}
+                                    {navItem.name}
                                 </Button>
                             ))}
                         </Box>
@@ -130,15 +129,30 @@ const NavBar = () => {
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            {pages.map((page) => (
-                                <MenuItem
-                                    key={page}
+                            {navMenu.map((navItem, index) => (
+                                <Button
+                                    key={index}
                                     onClick={handleCloseNavMenu}
+                                    href={navItem.href}
+                                    color="info"
+                                    variant="text"
+                                    size="large"
+                                    sx={{
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                    }}
                                 >
-                                    <Typography textAlign="center">
-                                        {page}
-                                    </Typography>
-                                </MenuItem>
+                                    {navItem.name}
+                                </Button>
+                                // <MenuItem
+                                //     key={index}
+                                //     onClick={handleCloseNavMenu}
+                                //     href={navItem.href}
+                                // >
+                                //     <Typography textAlign="center">
+                                //         {navItem.name}
+                                //     </Typography>
+                                // </MenuItem>
                             ))}
                         </Menu>
                     </Box>

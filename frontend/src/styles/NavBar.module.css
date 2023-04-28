@@ -1,5 +1,11 @@
-.background {
+.appBar {
     background: var(--dk-blue);
+    position: sticky;
+}
+.navbarContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 .navbarTitle {
     padding: 1rem;
@@ -12,12 +18,12 @@
 }
 
 .navbarButton {
-    display: block;
     color: var(--off-white);
     font-family: var(--font-body-family);
     font-size: 1.25rem;
     font-weight: 700;
     text-transform: uppercase;
+    border-radius: 50px;
 }
 
 /* SMALL VIEW*/
