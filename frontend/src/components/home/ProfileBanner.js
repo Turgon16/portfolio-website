@@ -86,9 +86,13 @@ const ProfileBanner = () => {
                     </IconButton>
                 </Box>
                 <Box className={styles.profileButtonContainer}>
-                    <Button className={styles.button} href="#" color="inherit">
+                    <Button
+                        className={styles.button}
+                        href="#cards"
+                        color="inherit"
+                    >
                         <Typography className={styles.buttonText}>
-                            Try one of my apps
+                            More about my background
                         </Typography>
                         <KeyboardDoubleArrowRightIcon
                             fontSize="large"
