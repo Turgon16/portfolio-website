@@ -210,12 +210,13 @@
     width: 100%;
 }
 .cardsContainer {
-    width: 100vw;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .card {
     margin: 2rem;
+    padding: 1rem;
     max-width: fit-content;
     background: var(--off-white);
     border-radius: 0.5rem;
@@ -239,6 +240,7 @@
     text-align: center;
 }
 .cardsText {
+    margin-bottom: 1rem;
     max-width: 52ch;
     color: var(--dk-grey);
     font-family: var(--font-body-family);
@@ -339,16 +341,13 @@
     /* Parallax Banner Styles */
     .parallaxCenteredContainer {
         flex-direction: row;
+        align-items: unset;
     }
     .parallaxTop,
     .parallaxBottom {
         width: 100%;
         display: flex;
         justify-content: unset;
-    }
-    .parallaxTop,
-    .parallaxBottom {
-        height: 100%;
     }
     .parallaxBottom {
         flex-direction: row-reverse;
@@ -391,8 +390,11 @@
         max-width: 32ch;
         font-size: 2rem;
     }
+
+    /* Card Styles */
     .cardsContainer {
         flex-direction: row;
+        align-items: unset;
     }
 }
 
@@ -403,6 +405,9 @@
         margin-right: none;
     }
 
-    /* Parallax Banner Styles */
+    /* Card Styles */
+    .cardsTitle {
+        font-size: 2rem;
+    }
 }
 

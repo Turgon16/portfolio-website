@@ -17,7 +17,7 @@ const CardsBanner = () => {
 
     return (
         <Box className={styles.cardsBanner} id={'cards'}>
-            <Container className={styles.cardsContainer}>
+            <Container maxWidth="xl" className={styles.cardsContainer}>
                 {Cards.map((card, index) => (
                     <Card className={styles.card} key={index}>
                         <CardContent className={styles.cardContainer}>
@@ -31,7 +31,10 @@ const CardsBanner = () => {
                                 {card.name}
                             </Typography>
                             <Typography className={styles.cardsText}>
-                                {card.text}
+                                {card.text1}
+                            </Typography>
+                            <Typography className={styles.cardsText}>
+                                {card.text2}
                                 <span className="widow-wrap">
                                     {card.textWidow}
                                 </span>
