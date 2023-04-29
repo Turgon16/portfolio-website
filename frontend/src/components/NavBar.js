@@ -5,6 +5,7 @@ import { useState } from 'react';
 // MUI Imports
 import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
 import MenuIcon from '@mui/icons-material/Menu';
+import { CssBaseline } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -41,124 +42,126 @@ const NavBar = () => {
     const router = useRouter();
 
     return (
-        <AppBar className={styles.appBar}>
-            <Container maxWidth="xl">
-                <Toolbar>
-                    {/* Below is the md-xl view of the appbar */}
-                    <Box
-                        sx={{
-                            width: '100%',
-                            display: 'flex',
-                            justifyContent: 'space-between',
-                        }}
-                    >
+        <CssBaseline>
+            <AppBar className={styles.appBar}>
+                <Container maxWidth="xl">
+                    <Toolbar>
+                        {/* Below is the md-xl view of the appbar */}
                         <Box
                             sx={{
+                                width: '100%',
                                 display: 'flex',
                                 justifyContent: 'space-between',
-                                alignItems: 'center',
+                            }}
+                        >
+                            <Box
+                                sx={{
+                                    display: 'flex',
+                                    justifyContent: 'space-between',
+                                    alignItems: 'center',
+                                }}
+                            >
+                                <IconButton
+                                    sx={{
+                                        display: { xs: 'flex', md: 'flex' },
+                                        mr: 1,
+                                        color: 'white',
+                                    }}
+                                    onClick={() => {
+                                        router.push('../');
+                                    }}
+                                >
+                                    <DeveloperBoardIcon fontSize="large" />
+                                </IconButton>
+                                <Typography
+                                    variant="h6"
+                                    noWrap
+                                    component="a"
+                                    href="/"
+                                    className={styles.navbarTitle}
+                                >
+                                    Tyler.dev
+                                </Typography>
+                            </Box>
+                            <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+                                {navMenu.map((navItem, index) => (
+                                    <Button
+                                        className={styles.navbarButton}
+                                        key={index}
+                                        onClick={handleCloseNavMenu}
+                                        href={navItem.href}
+                                    >
+                                        {navItem.name}
+                                    </Button>
+                                ))}
+                            </Box>
+                        </Box>
+                        {/* Below is the xs-s view of the navbar */}
+                        <Box
+                            sx={{
+                                flexGrow: 1,
+                                display: { xs: 'flex', md: 'none' },
                             }}
                         >
                             <IconButton
-                                sx={{
-                                    display: { xs: 'flex', md: 'flex' },
-                                    mr: 1,
-                                    color: 'white',
-                                }}
-                                onClick={() => {
-                                    router.push('../');
-                                }}
+                                size="large"
+                                aria-label="account of current user"
+                                aria-controls="menu-appbar"
+                                aria-haspopup="true"
+                                onClick={handleOpenNavMenu}
+                                color="inherit"
                             >
-                                <DeveloperBoardIcon fontSize="large" />
+                                <MenuIcon fontSize="large" />
                             </IconButton>
-                            <Typography
-                                variant="h6"
-                                noWrap
-                                component="a"
-                                href="/"
-                                className={styles.navbarTitle}
+                            <Menu
+                                id="menu-appbar"
+                                anchorEl={anchorElNav}
+                                anchorOrigin={{
+                                    vertical: 'bottom',
+                                    horizontal: 'left',
+                                }}
+                                keepMounted
+                                transformOrigin={{
+                                    vertical: 'top',
+                                    horizontal: 'left',
+                                }}
+                                open={Boolean(anchorElNav)}
+                                onClose={handleCloseNavMenu}
+                                sx={{
+                                    display: { xs: 'block', md: 'none' },
+                                }}
                             >
-                                Tyler.dev
-                            </Typography>
+                                {navMenu.map((navItem, index) => (
+                                    <Button
+                                        key={index}
+                                        onClick={handleCloseNavMenu}
+                                        href={navItem.href}
+                                        color="info"
+                                        variant="text"
+                                        size="large"
+                                        sx={{
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                        }}
+                                    >
+                                        {navItem.name}
+                                    </Button>
+                                    // <MenuItem
+                                    //     key={index}
+                                    //     onClick={handleCloseNavMenu}
+                                    //     href={navItem.href}
+                                    // >
+                                    //     <Typography textAlign="center">
+                                    //         {navItem.name}
+                                    //     </Typography>
+                                    // </MenuItem>
+                                ))}
+                            </Menu>
                         </Box>
-                        <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                            {navMenu.map((navItem, index) => (
-                                <Button
-                                    className={styles.navbarButton}
-                                    key={index}
-                                    onClick={handleCloseNavMenu}
-                                    href={navItem.href}
-                                >
-                                    {navItem.name}
-                                </Button>
-                            ))}
-                        </Box>
-                    </Box>
-                    {/* Below is the xs-s view of the navbar */}
-                    <Box
-                        sx={{
-                            flexGrow: 1,
-                            display: { xs: 'flex', md: 'none' },
-                        }}
-                    >
-                        <IconButton
-                            size="large"
-                            aria-label="account of current user"
-                            aria-controls="menu-appbar"
-                            aria-haspopup="true"
-                            onClick={handleOpenNavMenu}
-                            color="inherit"
-                        >
-                            <MenuIcon fontSize="large" />
-                        </IconButton>
-                        <Menu
-                            id="menu-appbar"
-                            anchorEl={anchorElNav}
-                            anchorOrigin={{
-                                vertical: 'bottom',
-                                horizontal: 'left',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'left',
-                            }}
-                            open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
-                            sx={{
-                                display: { xs: 'block', md: 'none' },
-                            }}
-                        >
-                            {navMenu.map((navItem, index) => (
-                                <Button
-                                    key={index}
-                                    onClick={handleCloseNavMenu}
-                                    href={navItem.href}
-                                    color="info"
-                                    variant="text"
-                                    size="large"
-                                    sx={{
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                    }}
-                                >
-                                    {navItem.name}
-                                </Button>
-                                // <MenuItem
-                                //     key={index}
-                                //     onClick={handleCloseNavMenu}
-                                //     href={navItem.href}
-                                // >
-                                //     <Typography textAlign="center">
-                                //         {navItem.name}
-                                //     </Typography>
-                                // </MenuItem>
-                            ))}
-                        </Menu>
-                    </Box>
-                </Toolbar>
-            </Container>
-        </AppBar>
+                    </Toolbar>
+                </Container>
+            </AppBar>
+        </CssBaseline>
     );
 };
 export default NavBar;
