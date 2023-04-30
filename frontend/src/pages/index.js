@@ -4,6 +4,7 @@ import Head from 'next/head';
 // MUI Imports
 import { CssBaseline } from '@mui/material';
 import Box from '@mui/material/Box';
+import { StyledEngineProvider } from '@mui/material/styles';
 
 // Project Imports
 import Footer from '@/components/Footer';
@@ -27,16 +28,18 @@ export default function Home() {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main>
-                <CssBaseline />
-                <NavBar />
-                <Box className="centered-container">
-                    <ProfileBanner />
-                    <ParallaxBanner />
-                    <CardsBanner />
-                </Box>
-                <Footer />
-            </main>
+            <StyledEngineProvider injectFirst>
+                <main>
+                    <CssBaseline />
+                    <NavBar />
+                    <Box className="centered-container">
+                        <ProfileBanner />
+                        <ParallaxBanner />
+                        <CardsBanner />
+                    </Box>
+                    <Footer />
+                </main>
+            </StyledEngineProvider>
         </>
     );
 }
