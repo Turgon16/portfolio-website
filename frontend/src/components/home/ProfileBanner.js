@@ -3,9 +3,9 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 // MUI Imports
+import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -86,7 +86,7 @@ const ProfileBanner = () => {
                     </IconButton>
                 </Box>
                 <Box className={styles.profileButtonContainer}>
-                    <Button
+                    {/* <Button
                         className={styles.button}
                         href="#cards"
                         color="inherit"
@@ -95,6 +95,20 @@ const ProfileBanner = () => {
                             More about my background
                         </Typography>
                         <KeyboardDoubleArrowRightIcon
+                            fontSize="large"
+                            className={styles.buttonIcon}
+                        />
+                    </Button> */}
+                    <Button
+                        className={styles.button}
+                        href="../files/TylerHum-Resume.pdf"
+                        target="_blank"
+                        color="inherit"
+                    >
+                        <Typography className={styles.buttonText}>
+                            Check out my resume
+                        </Typography>
+                        <DownloadIcon
                             fontSize="large"
                             className={styles.buttonIcon}
                         />
