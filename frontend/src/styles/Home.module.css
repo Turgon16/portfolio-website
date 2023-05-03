@@ -70,7 +70,8 @@
 }
 .button,
 .parallaxButton,
-.parallaxCloseButton {
+.parallaxCloseButton,
+.cardButton {
     border-radius: 30px;
     padding: 1rem;
     text-transform: none;
@@ -84,13 +85,14 @@
 }
 .button:hover,
 .parallaxButton:hover,
-.parallaxCloseButton:hover {
+.parallaxCloseButton:hover,
+.cardButton:hover {
     color: var(--lt-blue);
     background: var(--dk-blue);
-    box-shadow: 2px 2px 5px var(--dk-grey);
     transition: all 0.2s ease-in-out;
 }
-.buttonText {
+.buttonText,
+.cardButtonText {
     font-family: var(--font-body-family);
 }
 

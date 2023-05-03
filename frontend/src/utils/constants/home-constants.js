@@ -111,8 +111,8 @@ const Cards = [
         text1: 'I recently had the pleasure of working on a project for a non-profit registered charity organization that included rebuilding their future website from the ground up.',
         text2: 'During this four month project I consulted with our client and gathered requirements for the project. I helped plan, design and build an internal user management system. I was a key part of the UI/UX design for the system, and then helped with building the external ',
         textWidow: 'facing website.',
-        linkText: 'Some Link',
-        link: '',
+        linkText: 'Visit their blog',
+        link: 'https://www.aquaticbiosphere.ca/post/nait-students-design-new-digital-home-for-aquatic-biosphere?postId=7b49e2d6-29ee-4078-80ed-364fe5a54445',
     },
     {
         name: 'Development Process',
@@ -121,7 +121,7 @@ const Cards = [
         text1: `I have experience working in an agile environment using the Scrum methodology: from regularly scheduled client consultation to daily standup. I've developed in consistant sprint cycles starting with backlog and sprint planning through to review and retrospective.`,
         text2: `I'm experienced with using GitHub for version control and working with branching technology. I've used Jira as a primary project `,
         textWidow: 'management tool.',
-        linkText: 'Some Link',
+        linkText: '',
         link: '',
     },
     {
@@ -131,7 +131,7 @@ const Cards = [
         text1: 'I recently graduated from the Northern Alberta Institute of Technology (NAIT) with a diploma in Digital Media and IT. My specialization was in software development.',
         text2: 'I learned a broad range of essential skills and technologies, including full-stack application development, web development, database management, BI solution development, and developing Android applications with Flutter and Dart. NAIT taught me core, fundamental development practices including documentation and testing, writing clean and scalable code, and working in an team-based ',
         textWidow: 'agile environment.',
-        linkText: 'Some Link',
+        linkText: '',
         link: '',
     },
 ];
