@@ -3,8 +3,8 @@ const HomeItems = {
         img: '/img/tyler-hum.webp',
         alt: 'An profile image of Tyler Hum, a male in his thirties with black square-lensed glasses. A rich blue background is behind him.',
         title1: 'Full-Stack',
-        title2: 'Application Developer',
-        text: `Hi! My name is Tyler. I'm a passionate creative with a penchant for storytelling, building websites, and developing full-stack web-based applications. You'll find me in beautiful `,
+        title2: 'Software Developer',
+        text: `Hi! My name is Tyler. I'm a passionate creative with a penchant for storytelling, building websites, and developing full-stack applications. You'll find me in beautiful `,
         textWidow: 'Edmonton, Alberta.',
     },
 };
